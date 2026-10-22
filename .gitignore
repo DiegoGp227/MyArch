@@ -1,0 +1,15 @@
+# Hyprland rice
+*.bak
+*.save
+*.log
+logs/
+backup*/
+.DS_Store
+*.swp
+*.swo
+*~
+.cache/
+__pycache__/
+*.pyc
+.waypaper-history
+waybar-autostart.log
