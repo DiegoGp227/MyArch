@@ -1,0 +1,147 @@
+{
+    "custom/arch": {
+        "format": "󰣇",
+        "tooltip": true,
+        "tooltip-format": "btw"
+    },
+    "custom/playerctl": {
+        "format": "{}",
+        "exec": "echo PLAY",
+        "interval": 1,
+        "on-click": "playerctl play-pause",
+        "on-click-right": "playerctl next"
+    },
+    "custom/playerctl-prev": {
+        "format": "",
+        "on-click": "playerctl previous"
+    },
+    "custom/playerctl-play": {
+        "format": "",
+        "on-click": "playerctl play-pause"
+    },
+    "custom/playerctl-next": {
+        "format": "",
+        "on-click": "playerctl next"
+    },
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "warp-on-scroll": false,
+        "format": "{name}",
+        "format-icons": {
+            "urgent": "",
+            "active": "",
+            "default": ""
+        }
+    },
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        }
+    },
+    "backlight": {
+        "device": "intel_backlight",
+        "format": "{icon} {percent}%",
+        "format-icons": ["", "", "", "", "", "", "", "", ""],
+        "on-scroll-up": "brightnessctl set +5%",
+        "on-scroll-down": "brightnessctl set 5%-"
+    },
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-bluetooth": "{icon} {volume}%  {format_source}",
+        "format-bluetooth-muted": " {icon}  {format_source}",
+        "format-muted": " {format_source}",
+        "format-source": " {volume}%",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+    "custom/wifi": {
+        "format": "{icon}",
+        "format-icons": {
+            "connected": "",
+            "disconnected": "󰖪"
+        },
+        "exec": "~/.config/waybar/scripts/wifi.sh",
+        "interval": 5,
+        "on-click": "sh ~/scripts/rofi-wifi-menu/rofi-wifi-menu.sh"
+    },
+    "cpu": {
+        "format": "  {usage}%",
+        "tooltip": true
+    },
+    "memory": {
+        "format": "  {}%",
+        "tooltip": true
+    },
+    "temperature": {
+        "interval": 10,
+        // "hwmon-path": "/sys/devices/platform/coretemp.0/hwmon/hwmon4/temp1_input",
+        "critical-threshold": 100,
+        "format-critical": " {temperatureC}",
+        "format": " {temperatureC}°C"
+    },
+    "hyprland/language": {
+        "format": "  {}",
+        "format-en": "EN",
+        "format-ru": "RU"
+    },
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon} {capacity}%",
+        "format-full": "{icon} {capacity}%",
+        "format-charging": "⚡ {capacity}%",
+        "format-plugged": "⚡ {capacity}%",
+        "format-alt": "{time}  {icon}",
+        "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+    },
+    "clock": {
+        "format": "{:%I:%M %a %m/%d}",
+        "tooltip-format": "{calendar}",
+        "calendar": {
+            "format": {
+                "months": "<span color='#D3D04F'><b>{}</b></span>",
+                "days": "<span color='#93B1A6'><b>{}</b></span>",
+                "weekdays": "<span color='#8EAC50'><b>{}</b></span>",
+                "today": "<span color='#8EAC50'><b><u>{}</u></b></span>"
+            }
+        }
+    },
+    "custom/notification": {
+        "tooltip": false,
+        "format": "{icon}",
+        "format-icons": {
+            "notification": "󰂚",
+            "none": "󰂜",
+            "dnd-notification": "󰂛",
+            "dnd-none": "󰂜",
+            "inhibited-notification": "󰂛",
+            "inhibited-none": "󰂜",
+            "dnd-inhibited-notification": "󰂛",
+            "dnd-inhibited-none": "󰂜"
+        },
+        "return-type": "json",
+        "exec-if": "which swaync-client",
+        "exec": "swaync-client -swb",
+        "on-click": "swaync-client -t -sw",
+        "on-click-right": "swaync-client -d -sw",
+        "escape": true
+    },
+    "tray": {
+        "spacing": 6,
+        "icon-size": 14
+    }
+}

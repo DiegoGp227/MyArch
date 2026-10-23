@@ -1,0 +1,109 @@
+* {
+    font-family: "JetBrainsMono Nerd Font", "Fira Sans Semibold", FontAwesome, Roboto, sans-serif;
+    font-size: 15px;
+    transition: background-color .3s ease-out;
+}
+
+window#waybar {
+    background: transparent;
+    color: #c0caf5;
+    font-family: "JetBrainsMono Nerd Font", sans-serif;
+    transition: background-color .5s;
+}
+
+.modules-left,
+.modules-center,
+.modules-right {
+    background: rgba(0, 0, 8, .6);
+    margin: 2px 2px;
+    padding: 0 1px;
+    border-radius: 6px;
+}
+
+.modules-left {
+    padding: 0;
+}
+
+.modules-center {
+    padding: 0 10px;
+}
+
+#idle_inhibitor,
+#pulseaudio,
+#custom-wifi,
+#custom-notification,
+#custom-playerctl,
+#custom-playerctl-prev,
+#custom-playerctl-play,
+#custom-playerctl-next,
+#battery {
+    background: transparent;
+    color: #c0caf5;
+    font-family: "JetBrainsMono Nerd Font", sans-serif;
+    font-weight: 900;
+    font-size: 13pt;
+    border: none;
+    border-radius: 15px;
+    padding: 0 10px;
+    min-width: 0;
+}
+
+#idle_inhibitor:hover,
+#pulseaudio:hover,
+#custom-wifi:hover,
+#custom-notification:hover,
+#custom-playerctl:hover,
+#custom-playerctl-prev:hover,
+#custom-playerctl-play:hover,
+#custom-playerctl-next:hover,
+#battery:hover {
+    background: #13131d;
+    color: #1793D1;
+}
+
+#workspaces button {
+  background: transparent;
+  font-family: "JetBrainsMono Nerd Font", sans-serif;
+  font-weight: 900;
+  font-size: 13pt;
+  color: #1793D1;
+  border: none;
+  border-radius: 15px;
+}
+
+#workspaces button.active {
+    background: #13131d;
+    color: #c806f1;
+}
+
+#workspaces button:hover {
+  background: #13131d;
+  color: #c806f1;
+  box-shadow: none;
+}
+
+#custom-arch {
+    margin-left: 5px;
+    padding: 0 10px;
+    font-size: 25px;
+    transition: color .5s;
+}
+
+#custom-arch:hover {
+    color: #1793d1;
+}
+
+#temperature {
+    padding: 0 12px;
+    min-width: 60px;
+}
+
+#custom-notification {
+    padding: 0 10px;
+    margin: 0 2px;
+    border-radius: 10px;
+}
+
+#custom-notification:hover {
+    background: rgba(26, 27, 38, 0.9);
+}
