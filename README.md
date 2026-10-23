@@ -21,7 +21,7 @@ Configuración modular de **Hyprland** en **Arch Linux** con lanzador **Fuzzel**
 Instalar lo esencial en Arch:
 
 ```bash
-sudo pacman -S hyprland kitty thunar fuzzel waybar hypridle hyprlock hyprpaper waypaper swaync grim slurp wl-copy brightnessctl wpctl playerctl ttf-jetbrains-mono-nerd
+sudo pacman -S hyprland kitty thunar fuzzel spotify waybar hypridle hyprlock hyprpaper waypaper swaync grim slurp wl-copy brightnessctl wpctl playerctl ttf-jetbrains-mono-nerd
 ```
 
 ## 📁 Estructura
@@ -80,6 +80,7 @@ cp -r fuzzel ~/.config/
 |-------|--------|
 | `SUPER + Q` | Terminal (kitty) |
 | `SUPER + E` | Gestor de archivos (thunar) |
+| `SUPER + T` | Spotify |
 | `SUPER + SPACE` | Lanzador de aplicaciones (fuzzel) |
 | `SUPER + D` | Cerrar ventana activa |
 | `SUPER + V` | Flotante |
